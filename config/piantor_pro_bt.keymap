@@ -68,7 +68,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <100>;
         };
 
         homerow_layertap: homerow_layertap {
@@ -78,7 +78,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            require-prior-idle-ms = <125>;
             flavor = "balanced";
         };
     };
