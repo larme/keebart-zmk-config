@@ -81,6 +81,16 @@
             tapping-term-ms = <250>;
             flavor = "balanced";
         };
+
+        hold_or_sticky_layer: hold_or_sticky_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_OR_STICKY_LAYER";
+            bindings = <&mo>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -96,7 +106,7 @@
             //                    | GUI | LWR | SPC | ENT | RSE  | ALT |
 
             bindings = <
-&lt 1 TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &ctrl_alt  &kp CAPSLOCK  &kp A  &homerow_modtap LCTRL S  &homerow_layertap 1 D  &homerow_modtap LCTRL F  &kp G  &kp H  &homerow_modtap RCTRL J  &homerow_layertap 1 K  &homerow_modtap RCTRL L  &mo 2  &mo 2  &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp BACKSPACE  &kp ESCAPE  &mo 3  &mo 2  &kp LGUI  &mt LEFT_ALT SPACE  &mt LSHFT RET  &mt LCTRL RET  &mo 1  &mo 1
+&lt 3 TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &ctrl_alt  &kp CAPSLOCK  &kp A  &homerow_modtap LCTRL S  &homerow_layertap 1 D  &homerow_modtap LCTRL F  &kp G  &kp H  &homerow_modtap RCTRL J  &homerow_layertap 1 K  &homerow_modtap RCTRL L  &hold_or_sticky_layer 2 2  &hold_or_sticky_layer 2 2  &kp SPACE  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp BACKSPACE  &kp ESCAPE  &mo 4  &hold_or_sticky_layer 2 2  &kp LGUI  &mt LEFT_ALT SPACE  &mt LSHFT RET  &mt LCTRL RET  &mo 1  &mo 1
             >;
         };
 
@@ -117,6 +127,12 @@
         NUMSYM_SHIFT {
             bindings = <
 &trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans  &trans  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(UNDER)  &kp LS(PLUS)  &kp LS(DQT)  &trans  &trans  &trans  &trans  &kp LS(PIPE)  &trans  &trans  &trans  &trans  &kp LS(QMARK)  &kp LS(COLON)  &trans  &trans  &trans  &kp LS(LT)  &kp LS(GT)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &kp DOT  &kp N1  &kp N2  &kp N3  &kp MINUS  &kp LS(PLUS)  &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
